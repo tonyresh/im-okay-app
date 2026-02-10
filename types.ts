@@ -1,3 +1,4 @@
+
 export enum Language {
   EN = 'en',
   UA = 'ua'
@@ -65,11 +66,11 @@ export interface UserState {
   authProvider?: 'google' | 'apple' | 'facebook';
   mood?: string;
   messengers: MessengerLinks;
+  // VIP System
   isVip: boolean;
   coins: number;
   level: number;
   xp: number;
-  unlockedFeatures: string[];
 }
 
 export type AppTranslations = {
@@ -120,24 +121,12 @@ export type AppTranslations = {
     viber: string;
     save: string;
     editProfile: string;
-    vipStatus: string;
+    // New VIP strings
+    vipMember: string;
     level: string;
     coins: string;
     levelUp: string;
-    getVip: string;
+    becomeVip: string;
     vipBenefits: string;
-    xp: string;
-    inviteFriend: string;
-    inviteMsg: (name: string) => string;
-    fromContacts: string;
-    manualInvite: string;
-    enterPhoneOrSocial: string;
-    shop: string;
-    buy: string;
-    unlocked: string;
-    notEnoughCoins: string;
-    insufficientFunds: string;
-    exportProject: string;
-    backupDesc: string;
   }
 };

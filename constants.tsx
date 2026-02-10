@@ -7,13 +7,7 @@ export const SHOP_ITEMS = [
   { id: 'ghost', nameEn: 'Ghost Mode', nameUa: 'Режим Привида', price: 500, icon: '👻', descEn: 'Hide status from others', descUa: 'Приховати статус від інших' },
   { id: 'extended', nameEn: '72h Window', nameUa: 'Вікно 72г', price: 1000, icon: '⏳', descEn: 'Alert friends after 72h', descUa: 'Тривога через 72г' },
   { id: 'gold', nameEn: 'Gold Profile', nameUa: 'Золотий Профіль', price: 300, icon: '✨', descEn: 'Animated golden border', descUa: 'Анімована золота рамка' },
-  { id: 'guardian', nameEn: 'AI Guardian', nameUa: 'AI Охоронець', price: 600, icon: '🛡️', descEn: 'Daily AI safety tips', descUa: 'Щоденні поради від ШІ' },
-  { id: 'animated', nameEn: 'Animoods', nameUa: 'Анімудзи', price: 400, icon: '🕺', descEn: '3D animated moods', descUa: '3D анімовані настрої' },
-  { id: 'map', nameEn: 'Safety Map', nameUa: 'Карта Безпеки', price: 800, icon: '🗺️', descEn: 'Visual heat-map of friends', descUa: 'Візуальна карта друзів' },
-  { id: 'priority', nameEn: 'Priority Alerts', nameUa: 'Пріоритет', price: 750, icon: '🔥', descEn: 'Pinned status for friends', descUa: 'Закріплений статус у друзів' },
-  { id: 'themes', nameEn: 'Custom Themes', nameUa: 'Теми', price: 350, icon: '🎨', descEn: 'Midnight & Emerald UI', descUa: 'Темна та Смарагдова теми' },
-  { id: 'insights', nameEn: 'Safe Insights', nameUa: 'Аналітика', price: 250, icon: '📊', descEn: 'Weekly safety reports', descUa: 'Тижневі звіти безпеки' },
-  { id: 'legacy', nameEn: 'Legacy Badge', nameUa: 'Значок Ветерана', price: 100, icon: '🏅', descEn: 'Permanent status icon', descUa: 'Постійний значок статусу' }
+  { id: 'guardian', nameEn: 'AI Guardian', nameUa: 'AI Охоронець', price: 600, icon: '🛡️', descEn: 'Daily AI safety tips', descUa: 'Щоденні поради від ШІ' }
 ];
 
 export const TRANSLATIONS: AppTranslations = {
@@ -64,25 +58,12 @@ export const TRANSLATIONS: AppTranslations = {
     viber: "Viber",
     save: "Save",
     editProfile: "Profile",
-    vipStatus: "VIP Perk",
+    vipMember: "VIP Member",
     level: "Level",
     coins: "Coins",
     levelUp: "Level Up!",
-    getVip: "Get VIP",
-    vipBenefits: "Earn 2x Coins",
-    xp: "XP",
-    inviteFriend: "Invite",
-    inviteMsg: (name) => `${name} is worried! Download 'I'm Okay!': im-okay.app`,
-    fromContacts: "Contacts",
-    manualInvite: "Manual",
-    enterPhoneOrSocial: "Enter info",
-    shop: "Shop",
-    buy: "Unlock",
-    unlocked: "Owned",
-    notEnoughCoins: "Insufficient coins",
-    insufficientFunds: "You need more coins!",
-    exportProject: "Download Project",
-    backupDesc: "Save all files for GitHub"
+    becomeVip: "Get VIP",
+    vipBenefits: "x2 Coins daily"
   },
   [Language.UA]: {
     appName: "Я в порядку!",
@@ -131,35 +112,21 @@ export const TRANSLATIONS: AppTranslations = {
     viber: "Viber",
     save: "Зберегти",
     editProfile: "Профіль",
-    vipStatus: "VIP Бонус",
+    vipMember: "VIP Учасник",
     level: "Рівень",
     coins: "Монети",
-    levelUp: "Новий уровень!",
-    getVip: "Активувати VIP",
-    vipBenefits: "x2 монет щодня",
-    xp: "Досвід",
-    inviteFriend: "Запросити",
-    inviteMsg: (name) => `${name} переживає! Додайся в додаток 'Я в порядку!': im-okay.app`,
-    fromContacts: "Контакти",
-    manualInvite: "Ручно",
-    enterPhoneOrSocial: "Введіть дані",
-    shop: "Магазин",
-    buy: "Придбати",
-    unlocked: "Куплено",
-    notEnoughCoins: "Мало монет",
-    insufficientFunds: "Вам не вистачає монет!",
-    exportProject: "Завантажити проект",
-    backupDesc: "Зберегти файли для GitHub"
+    levelUp: "Новий рівень!",
+    becomeVip: "Стати VIP",
+    vipBenefits: "x2 монет щодня"
   }
 };
 
 export const SHARE_TRANSLATIONS = {
   [Language.EN]: {
-    shareTitle: "My Status",
-    sharePreview: "Preview",
-    shareMessage: (name: string, mood: string, streakText: string) => `I'm Okay! ${streakText} streak. Check me: im-okay.app/p/${name}`,
+    shareTitle: "My Safety Status",
+    shareMessage: (name: string, mood: string, streak: string) => `I'm Okay! My current streak is ${streak}. Mood: ${mood}`,
     shareAction: "Share",
-    copyLink: "Copy",
+    copyLink: "Copy Link",
     copied: "Copied!",
     imSafe: "I am safe!",
     days: "Days",
@@ -168,12 +135,11 @@ export const SHARE_TRANSLATIONS = {
     years: "Years"
   },
   [Language.UA]: {
-    shareTitle: "Мій статус",
-    sharePreview: "Перегляд",
-    shareMessage: (name: string, mood: string, streakText: string) => `Я в порядку! Вже ${streakText} поспіль. Мій статус: im-okay.app/p/${name}`,
+    shareTitle: "Мій статус безпеки",
+    shareMessage: (name: string, mood: string, streak: string) => `Я в порядку! Моя серія становить ${streak}. Настрій: ${mood}`,
     shareAction: "Поділитися",
     copyLink: "Копіювати",
-    copied: "ОК!",
+    copied: "Копійовано!",
     imSafe: "Я в безпеці!",
     days: "Днів",
     weeks: "Тижнів",
