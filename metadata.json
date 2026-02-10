@@ -1,0 +1,8 @@
+{
+  "name": "I'm Okay! (Я в порядку!)",
+  "description": "A safety-first social application that helps friends and family stay connected. Check in daily to let loved ones know you're safe, earn points for consistency, and receive alerts if a friend hasn't checked in for 48 hours.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
